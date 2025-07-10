@@ -58,13 +58,7 @@ const HomeBanner = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <motion.img
-            src="../../../public/bannerpic.jpg"
-            className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-lg shadow-2xl mx-auto"
-            alt="Job banner"
-            variants={floatSwayVariant}
-            animate="animate"
-          />
+        
         </motion.div>
 
        
@@ -97,14 +91,7 @@ const HomeBanner = () => {
             This isn’t just a job board — it’s your career launchpad. 🚀
           </motion.p>
 
-          <motion.button
-            variants={childVariant}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn btn-primary"
-          >
-            Get Started
-          </motion.button>
+         
 
           
           <motion.div
