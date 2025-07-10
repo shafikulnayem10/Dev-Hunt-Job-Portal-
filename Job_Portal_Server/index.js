@@ -1,4 +1,4 @@
-// === BACKEND (Express + MongoDB) ===
+
 const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
@@ -9,17 +9,18 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-// === Middleware ===
+
 app.use(cors({
   origin: [
-    'http://localhost:5173',               // ← ADD THIS LINE
-    'http://localhost:5176',              // local dev
-    'https://job-portal-9e7ab.web.app' ,
-      'https://job-portal-9e7ab.firebaseapp.com',
-      https:dev-hunt-job-portal-client.onrender.com
+    'http://localhost:5173',
+    'http://localhost:5176',
+    'https://job-portal-9e7ab.web.app',
+    'https://job-portal-9e7ab.firebaseapp.com',
+    'https://dev-hunt-job-portal-client.onrender.com' 
   ],
   credentials: true
 }));
+
 app.use(express.json());
 app.use(cookieParser());
 
@@ -35,8 +36,9 @@ const verifyJWT = (req, res, next) => {
   });
 };
 
-// === MongoDB ===
+
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.efufbxu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -54,14 +56,15 @@ async function run() {
 
     app.get('/', (req, res) => res.send('Jobs are falling from the sky ☁️💼'));
 
-    // === AUTH ===
+    // === AUTH ROUTES ===
     app.post('/jwt', (req, res) => {
       const user = req.body;
       const token = jwt.sign(user, process.env.JWT_SECRET, { expiresIn: '1h' });
+
       res.cookie('jobToken', token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        sameSite:  process.env.NODE_ENV === "production" ? "none" : "strict"
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "strict"
       }).send({ success: true });
     });
 
@@ -69,11 +72,11 @@ async function run() {
       res.clearCookie('jobToken', {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        sameSite:  process.env.NODE_ENV === "production" ? "none" : "strict"
-      }).send({ success: true, message: 'Logged out' });
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "strict"
+      }).send({ success: true, message: 'Logged out successfully' });
     });
 
-    // === JOB ROUTES ===
+   
     app.get('/jobs', async (req, res) => {
       try {
         const jobs = await jobsCollection.find().toArray();
@@ -103,8 +106,8 @@ async function run() {
     });
 
     app.get('/jobs-by-hr', verifyJWT, async (req, res) => {
-      const email = req.user.email;
       try {
+        const email = req.user.email;
         const jobs = await jobsCollection.find({ hr_email: email }).toArray();
         res.send(jobs);
       } catch (err) {
@@ -112,7 +115,7 @@ async function run() {
       }
     });
 
-    // === JOB APPLICATION ROUTES ===
+    
     app.post('/job-applications', verifyJWT, async (req, res) => {
       try {
         const { job_id, github, linkedin, cv_link } = req.body;
@@ -165,11 +168,12 @@ async function run() {
     });
 
   } catch (error) {
-    console.error("❌ MongoDB connection error:", error);
+    console.error("MongoDB connection error:", error);
   }
 }
 
 run().catch(console.dir);
+
 app.listen(port, () => {
-  console.log(`🌐 Server running at http://localhost:${port}`);
+  console.log(` Server running at http://localhost:${port}`);
 });
