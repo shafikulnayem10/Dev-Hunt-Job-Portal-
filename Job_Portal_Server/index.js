@@ -15,7 +15,8 @@ app.use(cors({
     'http://localhost:5173',               // ← ADD THIS LINE
     'http://localhost:5176',              // local dev
     'https://job-portal-9e7ab.web.app' ,
-      'https://job-portal-9e7ab.firebaseapp.com'
+      'https://job-portal-9e7ab.firebaseapp.com',
+      https:dev-hunt-job-portal-client.onrender.com
   ],
   credentials: true
 }));
