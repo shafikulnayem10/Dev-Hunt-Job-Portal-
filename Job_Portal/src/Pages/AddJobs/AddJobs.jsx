@@ -99,7 +99,7 @@ const AddJobs = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:3000/jobs", newJob, {
+      const response = await axios.post("https://dev-hunt-job-portal-server.onrender.com/jobs", newJob, {
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",

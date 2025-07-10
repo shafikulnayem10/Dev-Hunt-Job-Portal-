@@ -34,7 +34,7 @@ const JobApply = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/job-applications',
+        '/job-applications',
         applicationData,
         {
           headers: {

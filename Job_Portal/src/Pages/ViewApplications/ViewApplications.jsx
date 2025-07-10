@@ -17,7 +17,7 @@ const ViewApplications = () => {
         setLoading(true);
         setError(null);
 
-        const response = await axios.get(`http://localhost:3000/job-applications?jobId=${jobId}`, {
+        const response = await axios.get(`https://dev-hunt-job-portal-server.onrender.com/job-applications?jobId=${jobId}`, {
           withCredentials: true,
           headers: {
             'Content-Type': 'application/json',

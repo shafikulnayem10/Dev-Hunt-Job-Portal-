@@ -19,7 +19,7 @@ const SignIn = () => {
       .then(result => {
         console.log("Sign in successful:", result.user.email);
         const user ={email:result.user.email}
-       axios.post('http://localhost:3000/jwt',user,{ withCredentials: true })
+       axios.post('https://dev-hunt-job-portal-server.onrender.com/jwt',user,{ withCredentials: true })
        .then(res=>{
         console.log(res.data);
        })

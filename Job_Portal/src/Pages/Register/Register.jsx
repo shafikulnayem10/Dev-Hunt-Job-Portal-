@@ -25,7 +25,7 @@ export default function Register() {
       .then(result => {
         console.log(result.user);
         const user ={email:result.user.email}
-       axios.post('http://localhost:3000/jwt',user,{ withCredentials: true })
+       axios.post('https://dev-hunt-job-portal-server.onrender.com/jwt',user,{ withCredentials: true })
         form.reset();
         navigate('/'); // ✅ redirect to home after registration
       })

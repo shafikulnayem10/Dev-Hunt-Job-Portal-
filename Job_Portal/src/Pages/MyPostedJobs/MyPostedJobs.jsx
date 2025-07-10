@@ -20,7 +20,7 @@ const MyPostedJobs = () => {
                 setError(null);
 
                 // Fetch posted jobs using axios
-                const jobsResponse = await axios.get(`http://localhost:3000/jobs-by-hr?email=${user.email}`, {
+                const jobsResponse = await axios.get(`https://dev-hunt-job-portal-server.onrender.com/jobs-by-hr?email=${user.email}`, {
                     withCredentials: true,
                     headers: {
                         'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ const MyPostedJobs = () => {
                 setJobs(jobsResponse.data);
 
                 // Fetch application counts using axios
-                const countsResponse = await axios.get('http://localhost:3000/job-applications-count', {
+                const countsResponse = await axios.get('https://dev-hunt-job-portal-server.onrender.com/job-applications-count', {
                     withCredentials: true,
                     headers: {
                         'Content-Type': 'application/json',

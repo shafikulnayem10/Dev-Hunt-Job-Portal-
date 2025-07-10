@@ -8,7 +8,7 @@ const HotJobs = () => {
   const [searchLocation, setSearchLocation] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3000/jobs')
+    fetch('https://dev-hunt-job-portal-server.onrender.com/jobs')
       .then(res => res.json())
       .then(data => {
         setJobs(data);

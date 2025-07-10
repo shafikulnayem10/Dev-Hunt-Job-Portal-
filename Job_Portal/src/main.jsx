@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router";
-import App from "./app";
+// src/main.jsx
+import App from './App'; // 👈 Use exact filename case!
+
 import AuthProvider from "./Context/AuthContext/AuthProvider";
 
 const root = document.getElementById("root");

@@ -8,7 +8,7 @@ const JobDetails = () => {
   const navigate = useNavigate(); // ✅ for back button with history
 
   useEffect(() => {
-    fetch(`http://localhost:3000/jobs/${id}`)
+    fetch(`https://dev-hunt-job-portal-server.onrender.com/jobs/${id}`)
       .then(res => res.json())
       .then(data => {
         setJob(data);

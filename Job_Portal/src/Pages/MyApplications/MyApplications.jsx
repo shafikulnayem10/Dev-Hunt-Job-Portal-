@@ -21,7 +21,7 @@ const MyApplications = () => {
             try {
                 // First fetch applications
                 const appsResponse = await axios.get(
-                    `http://localhost:3000/job-applications?email=${user.email}`,
+                    `https://dev-hunt-job-portal-server.onrender.com/job-applications?email=${user.email}`,
                     { withCredentials: true }
                 );
                 
@@ -35,7 +35,7 @@ const MyApplications = () => {
 
                 // Then fetch jobs
                 const jobsResponse = await axios.get(
-                    'http://localhost:3000/jobs',
+                    'https://dev-hunt-job-portal-server.onrender.com/jobs',
                     { withCredentials: true }
                 );
                 
