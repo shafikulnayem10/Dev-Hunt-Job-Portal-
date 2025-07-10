@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useNavigate, Link } from 'react-router-dom'; // ✅ Import Link
+import { useNavigate, Link } from 'react-router-dom'; 
 import { motion } from 'framer-motion';
 import AuthContext from '../../Context/AuthContext/AuthContext';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
@@ -24,7 +24,7 @@ const SignIn = () => {
         console.log(res.data);
        })
        
-       navigate('/'); // ✅ Redirect to home after sign in
+       navigate('/'); 
       })
       .catch(e => {
         console.error("Sign in error:", e);
@@ -35,7 +35,7 @@ const SignIn = () => {
     <div className="hero bg-base-200 min-h-screen overflow-hidden">
       <div className="hero-content flex-col lg:flex-row-reverse">
 
-        {/* 🪄 Animated left text block */}
+        
         <motion.div
           className="text-center lg:text-left"
           initial={{ opacity: 0, x: 100 }}
@@ -47,7 +47,7 @@ const SignIn = () => {
           </p>
         </motion.div>
 
-        {/* 🌀 Animated sign-in card */}
+        
         <motion.div
           className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
           initial={{ opacity: 0, y: 50 }}
@@ -85,7 +85,7 @@ const SignIn = () => {
                   <a className="link link-hover">Forgot password?</a>
                 </div>
 
-                {/* 💥 Animated Sign In Button */}
+                {/* Animated Sign In Button */}
                 <motion.button
                   className="btn btn-neutral mt-4 w-full"
                   whileHover={{ scale: 1.05 }}
@@ -97,10 +97,10 @@ const SignIn = () => {
               </fieldset>
             </form>
 
-            {/* 🌟 Social login */}
+          
             <SocialLogin />
 
-            {/* ✅ Register option */}
+           
             <p className="mt-4 text-center text-sm">
               Don’t have an account?{' '}
               <Link to="/register" className="text-primary font-semibold hover:underline">

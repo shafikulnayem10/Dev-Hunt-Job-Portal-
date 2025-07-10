@@ -19,7 +19,7 @@ const MyPostedJobs = () => {
                 setLoading(true);
                 setError(null);
 
-                // Fetch posted jobs using axios
+                
                 const jobsResponse = await axios.get(`https://dev-hunt-job-portal-server.onrender.com/jobs-by-hr?email=${user.email}`, {
                     withCredentials: true,
                     headers: {
@@ -29,7 +29,7 @@ const MyPostedJobs = () => {
 
                 setJobs(jobsResponse.data);
 
-                // Fetch application counts using axios
+                
                 const countsResponse = await axios.get('https://dev-hunt-job-portal-server.onrender.com/job-applications-count', {
                     withCredentials: true,
                     headers: {
@@ -47,7 +47,7 @@ const MyPostedJobs = () => {
                 console.error('Error:', err);
                 setError(err.response?.data?.message || err.message);
                 if (err.response?.status === 401 || err.response?.status === 403) {
-                    // Handle token expiration or invalid token
+                    
                     navigate('/signin');
                 }
             } finally {

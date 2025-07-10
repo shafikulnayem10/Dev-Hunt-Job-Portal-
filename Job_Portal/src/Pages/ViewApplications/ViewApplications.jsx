@@ -29,7 +29,7 @@ const ViewApplications = () => {
         console.error("Error fetching applications:", err);
         setError(err.response?.data?.message || err.message || 'Failed to fetch applications');
         
-        // Redirect to login if unauthorized
+        
         if (err.response?.status === 401 || err.response?.status === 403) {
           navigate('/login');
         }

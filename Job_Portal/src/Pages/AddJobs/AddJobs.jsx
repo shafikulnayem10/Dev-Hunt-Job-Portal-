@@ -5,7 +5,7 @@ import Select from "react-select";
 import useAuth from '../../Hooks/CustomHook/useAuth';
 import axios from 'axios';
 
-// 🔹 Options for dropdowns (unchanged)
+
 const skillsOptions = [
   { value: "JavaScript", label: "JavaScript" },
   { value: "React", label: "React" },
@@ -29,7 +29,7 @@ const responsibilityOptions = [
   { value: "Marketing campaigns", label: "Marketing campaigns" },
 ];
 
-// 🎨 Custom styles for react-select (unchanged)
+
 const customStyles = {
   control: (base, state) => ({
     ...base,
@@ -106,15 +106,15 @@ const AddJobs = () => {
         }
       });
 
-      console.log("✅ Job added:", response.data);
-      toast.success("✅ Job posted successfully!");
+      console.log(" Job added:", response.data);
+      toast.success(" Job posted successfully!");
       form.reset();
       setRequirements([]);
       setResponsibilities([]);
       navigate("/myPostedJobs");
     } catch (error) {
-      console.error("❌ Error adding job:", error);
-      toast.error(`❌ ${error.response?.data?.message || "Failed to add job, please try again."}`);
+      console.error(" Error adding job:", error);
+      toast.error(`${error.response?.data?.message || "Failed to add job, please try again."}`);
     }
   };
 

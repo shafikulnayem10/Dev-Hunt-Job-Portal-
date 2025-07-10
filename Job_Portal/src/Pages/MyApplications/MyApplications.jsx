@@ -19,7 +19,7 @@ const MyApplications = () => {
             }
 
             try {
-                // First fetch applications
+                
                 const appsResponse = await axios.get(
                     `https://dev-hunt-job-portal-server.onrender.com/job-applications?email=${user.email}`,
                     { withCredentials: true }
@@ -33,7 +33,7 @@ const MyApplications = () => {
                     setApplications([]);
                 }
 
-                // Then fetch jobs
+               
                 const jobsResponse = await axios.get(
                     'https://dev-hunt-job-portal-server.onrender.com/jobs',
                     { withCredentials: true }
@@ -48,7 +48,7 @@ const MyApplications = () => {
                 }
 
             } catch (error) {
-                console.error("❌ Failed to fetch data:", error);
+                console.error(" Failed to fetch data:", error);
             } finally {
                 setLoading(false);
             }

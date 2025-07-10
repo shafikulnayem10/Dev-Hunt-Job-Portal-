@@ -44,12 +44,12 @@ const JobApply = () => {
         }
       );
 
-      alert("✅ Application submitted successfully!");
+      alert(" Application submitted successfully!");
       form.reset();
       navigate('/myapplications');
     } catch (err) {
       console.error("❌ Error:", err.response?.data || err.message);
-      alert(`❌ Failed to apply: ${err.response?.data?.message || err.message}`);
+      alert(` Failed to apply: ${err.response?.data?.message || err.message}`);
     } finally {
       setLoading(false);
     }

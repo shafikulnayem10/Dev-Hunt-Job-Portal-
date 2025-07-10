@@ -51,7 +51,7 @@ const HomeBanner = () => {
     >
       <div className="hero-content flex-col lg:flex-row-reverse">
 
-        {/* 🪂 Floating & Swaying Image */}
+        
         <motion.div
           className="flex-1"
           initial={{ opacity: 0 }}
@@ -67,7 +67,7 @@ const HomeBanner = () => {
           />
         </motion.div>
 
-        {/* ✨ Animated Text Content */}
+       
         <motion.div
           className="flex-1 text-center lg:text-left"
           variants={textVariants}
@@ -106,7 +106,7 @@ const HomeBanner = () => {
             Get Started
           </motion.button>
 
-          {/* 🎈 Bonus Balloon - Float Away on Hover */}
+          
           <motion.div
             whileHover={{
               y: -200,

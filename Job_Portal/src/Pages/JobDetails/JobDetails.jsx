@@ -5,7 +5,7 @@ const JobDetails = () => {
   const { id } = useParams();
   const [job, setJob] = useState(null);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate(); // ✅ for back button with history
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     fetch(`https://dev-hunt-job-portal-server.onrender.com/jobs/${id}`)
@@ -15,7 +15,7 @@ const JobDetails = () => {
         setLoading(false);
       })
       .catch(error => {
-        console.error("❌ Error fetching job details:", error);
+        console.error(" Error fetching job details:", error);
         setLoading(false);
       });
   }, [id]);
@@ -34,7 +34,7 @@ const JobDetails = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-4">
-      {/* ✅ Back Button */}
+    
       <button
         onClick={() => navigate('/')}
         className="btn btn-outline btn-primary mb-4"

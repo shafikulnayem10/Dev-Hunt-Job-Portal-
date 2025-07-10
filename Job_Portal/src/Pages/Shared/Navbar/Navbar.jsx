@@ -10,11 +10,11 @@ export default function Navbar() {
   const handleSignOut = () => {
     signOutUser()
       .then(() => {
-        console.log('✅ Successfully signed out');
+        console.log(' Successfully signed out');
         navigate('/signin');
       })
       .catch((e) => {
-        console.error('❌ Failed to sign out:', e);
+        console.error(' Failed to sign out:', e);
       });
   };
 
@@ -49,7 +49,7 @@ export default function Navbar() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.35 }}
       >
-        <NavLink to="/add-job">Add Job</NavLink> {/* ✅ New Add Job Link */}
+        <NavLink to="/add-job">Add Job</NavLink> 
       </motion.li>
       <motion.li
         initial={{ opacity: 0, y: -10 }}

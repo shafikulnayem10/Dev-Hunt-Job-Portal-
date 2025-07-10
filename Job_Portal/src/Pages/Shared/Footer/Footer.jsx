@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion'; // ✅ Import Framer Motion
+import { motion } from 'framer-motion'; 
 
 const containerVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -27,7 +27,7 @@ const Footer = () => {
       initial="hidden"
       animate="visible"
     >
-      {/* 🌀 Logo and About */}
+     
       <motion.aside variants={childVariants}>
         <motion.svg
           width="50"
@@ -50,7 +50,7 @@ const Footer = () => {
         </p>
       </motion.aside>
 
-      {/* 📦 Services */}
+     
       <motion.nav variants={childVariants}>
         <h6 className="footer-title">Services</h6>
         {['Branding', 'Design', 'Marketing', 'Advertisement'].map((item, i) => (
@@ -65,7 +65,7 @@ const Footer = () => {
         ))}
       </motion.nav>
 
-      {/* 🏢 Company */}
+   
       <motion.nav variants={childVariants}>
         <h6 className="footer-title">Company</h6>
         {['About us', 'Contact', 'Jobs', 'Press kit'].map((item, i) => (
@@ -80,7 +80,7 @@ const Footer = () => {
         ))}
       </motion.nav>
 
-      {/* 🧾 Legal */}
+     
       <motion.nav variants={childVariants}>
         <h6 className="footer-title">Legal</h6>
         {['Terms of use', 'Privacy policy', 'Cookie policy'].map((item, i) => (

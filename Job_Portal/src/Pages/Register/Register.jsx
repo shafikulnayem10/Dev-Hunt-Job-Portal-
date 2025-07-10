@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link, useNavigate } from 'react-router-dom'; // ✅ import Link and useNavigate
+import { Link, useNavigate } from 'react-router-dom';
 import AuthContext from '../../Context/AuthContext/AuthContext';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 import axios from 'axios';
@@ -27,7 +27,7 @@ export default function Register() {
         const user ={email:result.user.email}
        axios.post('https://dev-hunt-job-portal-server.onrender.com/jwt',user,{ withCredentials: true })
         form.reset();
-        navigate('/'); // ✅ redirect to home after registration
+        navigate('/'); 
       })
       .catch(e => {
         console.log(e.message);
@@ -39,7 +39,7 @@ export default function Register() {
     <div className="hero bg-base-200 min-h-screen overflow-hidden">
       <div className="hero-content flex-col lg:flex-row-reverse">
 
-        {/* 💬 Animated left-side paragraph */}
+        
         <motion.div
           className="text-center lg:text-left"
           initial={{ opacity: 0, x: 100 }}
@@ -51,14 +51,13 @@ export default function Register() {
           </p>
         </motion.div>
 
-        {/* 🧾 Animated registration card */}
         <motion.div
           className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
         >
-          {/* ✨ Animated heading */}
+         
           <motion.h1
             className="ml-8 mt-4 text-4xl font-bold"
             initial={{ opacity: 0, y: -20 }}
@@ -79,10 +78,10 @@ export default function Register() {
 
                 
 
-                {/* ❗ Error message */}
+               
                 {error && <p className="text-red-500 mt-2">{error}</p>}
 
-                {/* 🔘 Animated register button */}
+              
                 <motion.button
                   className="btn btn-neutral mt-4 w-full"
                   whileHover={{ scale: 1.05 }}
@@ -94,10 +93,10 @@ export default function Register() {
               </fieldset>
             </form>
 
-            {/* 🌟 Social login */}
+           
             <SocialLogin />
 
-            {/* ✅ Link to Sign In */}
+            
             <p className="mt-4 text-center text-sm">
               Already have an account?{' '}
               <Link to="/signin" className="text-primary font-semibold hover:underline">
