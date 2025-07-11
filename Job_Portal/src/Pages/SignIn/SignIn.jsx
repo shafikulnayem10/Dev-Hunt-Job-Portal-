@@ -81,9 +81,7 @@ const SignIn = () => {
                   placeholder="Password"
                   required
                 />
-                <div>
-                  <a className="link link-hover">Forgot password?</a>
-                </div>
+                
 
                 {/* Animated Sign In Button */}
                 <motion.button
