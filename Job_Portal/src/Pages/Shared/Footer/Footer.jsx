@@ -44,7 +44,7 @@ const Footer = () => {
           <path d="M22.672 15.226l-2.432.811..." />
         </motion.svg>
         <p>
-          ACME Industries Ltd.
+       Dev Hunt.
           <br />
           Providing reliable tech since 1992
         </p>
