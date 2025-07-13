@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 export default function About() {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate(-1); 
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -9,10 +16,19 @@ export default function About() {
       transition={{ duration: 0.6 }}
       className="max-w-5xl mx-auto px-6 py-12"
     >
+      
+      <button
+        onClick={handleBack}
+        className="mb-6 px-4 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition"
+      >
+        ← Back
+      </button>
+
       <h1 className="text-4xl font-bold text-center mb-6 text-indigo-600">About Dev Hunt</h1>
 
       <p className="text-lg text-gray-700 mb-8 text-center">
-        <strong>Dev Hunt</strong> is a modern job portal designed specifically for developers and tech enthusiasts. Whether you're looking for your first internship or your next full-time gig, we've got your back. 🧑‍💻✨
+        <strong>Dev Hunt</strong> is a modern job portal designed specifically for developers and tech enthusiasts.
+        Whether you're looking for your first internship or your next full-time gig, we've got your back. 🧑‍💻✨
       </p>
 
       <div className="grid md:grid-cols-2 gap-8 mb-12">
