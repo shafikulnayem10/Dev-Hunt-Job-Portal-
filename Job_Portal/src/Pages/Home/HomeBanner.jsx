@@ -35,7 +35,7 @@ const childVariant = {
 const HomeBanner = () => {
   const bannerRef = useRef(null);
 
-  // Scroll-based parallax
+  
   const { scrollYProgress } = useScroll({
     target: bannerRef,
     offset: ["start end", "end start"],
@@ -91,7 +91,11 @@ const HomeBanner = () => {
             This isn’t just a job board — it’s your career launchpad. 🚀
           </motion.p>
 
+<<<<<<< HEAD
          
+=======
+        
+>>>>>>> 9247682 (Add About page and fix build path error)
 
           
           <motion.div

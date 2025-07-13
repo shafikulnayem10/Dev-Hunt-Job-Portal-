@@ -10,6 +10,7 @@ import MyApplications from './Pages/MyApplications/MyApplications';
 import AddJobs from './Pages/AddJobs/AddJobs'; // ✅ import
 import MyPostedJobs from './Pages/MyPostedJobs/MyPostedJobs';
 import ViewApplications from './Pages/ViewApplications/ViewApplications';
+import About from './Pages/About/About';
 function App() {
   return (
     <>
@@ -27,7 +28,8 @@ function App() {
             <Route path="/add-job" element={<AddJobs />} />
             <Route path="/myPostedJobs" element={<MyPostedJobs></MyPostedJobs>}></Route>
             <Route path="/view-applications/:jobId" element={<ViewApplications />} />
-          
+          <Route path="/about" element={<About></About>} />
+
           
           </Routes>
     </>
