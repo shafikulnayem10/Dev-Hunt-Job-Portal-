@@ -90,14 +90,7 @@ const HomeBanner = () => {
             From internships to top-tier roles — search smart, apply fast, and get hired.
             This isn’t just a job board — it’s your career launchpad. 🚀
           </motion.p>
-
-<<<<<<< HEAD
-         
-=======
         
->>>>>>> 9247682 (Add About page and fix build path error)
-
-          
           <motion.div
             whileHover={{
               y: -200,
