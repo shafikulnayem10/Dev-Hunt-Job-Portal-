@@ -7,6 +7,7 @@ export default function Home() {
     <div>
     <HomeBanner></HomeBanner>
     <HotJobs></HotJobs>
+    
     </div>
   )
 }
