@@ -1,17 +1,42 @@
+# 💼 Dev Hunt – Job Portal
 
-Dev Hunt -A Job Portal
+**Dev Hunt** is a full-stack **MERN-based job portal** designed to connect job seekers and employers through a clean, efficient, and user-friendly platform.
 
-I just finished building and deploying my first MERN project.
-DevHunt – job portal built with MERN.
-🔗 Try it now: https://dev-hunt-job-portal-client.onrender.com
-🔹 For Job Seekers:
-✅ Browse & apply to tech jobs instantly
-✅ Track your applied jobs in one dashboard
-✅ Clean, distraction-free UI
-🔹 For Employers:
-✅ Post jobs in seconds
-✅ View all your job listings in one place
-✅ See applicants for each role & manage hires
+## 🚀 Tech Stack
 
+- **MongoDB** – Database  
+- **Express.js** – Backend framework  
+- **React.js** – Frontend UI  
+- **Node.js** – Server environment  
 
-Skills: Node.js · Express.js · MongoDB · React.js
+## 🔗 Live Demo
+
+👉 https://dev-hunt-job-portal-client.onrender.com
+
+## 👨‍💻 Features
+
+### 🔹 For Job Seekers
+- ✅ Browse and apply to tech jobs instantly  
+- ✅ Track applied jobs from a single dashboard  
+- ✅ Clean and distraction-free user interface  
+
+### 🔹 For Employers
+- ✅ Post job listings quickly  
+- ✅ Manage all posted jobs in one place  
+- ✅ View applicants and manage hiring efficiently  
+
+## 📈 Learning Outcomes
+
+- Building a full-stack MERN application  
+- RESTful API development with Express & Node.js  
+- MongoDB schema design and data handling  
+- Client–server integration using React  
+
+## 🛠 Skills Used
+
+Node.js · Express.js · MongoDB · React.js
+
+## 🙌 Feedback
+
+This is my first deployed MERN project.  
+Feedback and suggestions are highly appreciated.
